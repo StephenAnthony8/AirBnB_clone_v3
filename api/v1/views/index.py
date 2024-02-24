@@ -16,7 +16,7 @@ classes = {"amenities": Amenity, "cities": City,
 
 @app_views.route('/status', strict_slashes=False)
 def return_status():
-    """Returns a 'STATUS: OK' JSON"""
+    """Returns a STATUS: OK JSON"""
     j_encode = {
         'status': 'OK'
         }
