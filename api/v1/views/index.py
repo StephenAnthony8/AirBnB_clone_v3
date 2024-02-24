@@ -10,11 +10,8 @@ from models.state import State
 from models.user import User
 from models import storage
 
-classes = {"amenities": Amenity, "cities": City,
-           "places": Place, "reviews": Review, "states": State, "users": User}
 
-
-@app_views.route('/status', strict_slashes=False)
+@app_views.route('/status', strict_slashes=False, methods=['GET'])
 def return_status():
     """Returns a STATUS: OK JSON"""
     j_encode = {
@@ -24,9 +21,16 @@ def return_status():
     return (jsonify(j_encode))
 
 
-@app_views.route('/stats', strict_slashes=False)
+@app_views.route('/stats', strict_slashes=False, methods=['GET'])
 def return_stats():
     """returns a JSON representation of all objects"""
+    classes = {
+        "amenities": Amenity,
+        "cities": City,
+        "places": Place,
+        "reviews": Review,
+        "states": State,
+        "users": User}
     dict_obj = {}
 
     for key, value in classes.items():
