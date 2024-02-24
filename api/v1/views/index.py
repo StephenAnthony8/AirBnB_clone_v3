@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """views blueprint implementation"""
-# module documentation
 from api.v1.views import app_views
-from flask import jsonify, request
-# create a route '/status' that returns a JSON with status: "ok"
+from flask import jsonify
 
 
 @app_views.route('/status', strict_slashes=False)
