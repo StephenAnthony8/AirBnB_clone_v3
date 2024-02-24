@@ -2,7 +2,6 @@
 """ console """
 
 import cmd
-from datetime import datetime
 import models
 from models.base_model import BaseModel
 from models.amenity import Amenity
@@ -12,6 +11,7 @@ from models.review import Review
 from models.state import State
 from models.user import User
 import shlex  # for splitting the line along spaces except in double quotes
+# from datetime import datetime
 
 classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
            "Place": Place, "Review": Review, "State": State, "User": User}
