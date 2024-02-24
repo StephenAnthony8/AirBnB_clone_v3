@@ -14,7 +14,7 @@ app.register_blueprint(app_views)
 
 
 @app.errorhandler(404)
-def page_not_found(err):
+def page_not_found(e):
     """returns an error 404 JSON"""
     return (jsonify({'error': 'Not found'}))
 
