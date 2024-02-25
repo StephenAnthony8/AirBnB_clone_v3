@@ -20,7 +20,7 @@ def page_not_found(e):
 
 
 @app.teardown_appcontext
-def teardown_my_db(exc=None):
+def teardown_my_db(exc):
     """closes the storage on end of connection to host"""
     storage.close()
 
