@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ holds class User"""
 from models import storage_t
-from models.base_model import BaseModel, Base
+from models.base_model import Base, BaseModel
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
 
