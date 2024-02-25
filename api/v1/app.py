@@ -2,10 +2,12 @@
 """starts a Flask web application"""
 from api.v1.views import app_views
 from flask import Flask, jsonify
+from flask_cors import CORS
 from models import storage
 from os import getenv
 
 app = Flask(__name__)
+CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 
 # register blueprint here
 app.register_blueprint(app_views)
