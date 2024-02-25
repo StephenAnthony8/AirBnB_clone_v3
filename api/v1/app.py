@@ -3,7 +3,7 @@
 starts a Flask web application
 """
 from os import getenv
-from flask import Flask, jsonify
+from flask import Flask, jsonify, make_response
 from models import storage
 from api.v1.views import app_views
 
@@ -16,7 +16,7 @@ app.register_blueprint(app_views)
 @app.errorhandler(404)
 def page_not_found(e):
     """returns an error 404 JSON"""
-    return (jsonify({'error': 'Not found'}))
+    return (jsonify({'error': 'Not found'}), 404)
 
 
 @app.teardown_appcontext
