@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-"""
-starts a Flask web application
-"""
+"""starts a Flask web application"""
 from os import getenv
-from flask import Flask, jsonify, make_response
+from flask import Flask, jsonify
 from models import storage
 from api.v1.views import app_views
 
