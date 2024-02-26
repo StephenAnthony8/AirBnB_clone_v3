@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """starts a Flask web application"""
-from models import storage
 from api.v1.views import app_views
+from models import storage
 from flask import Flask, jsonify
 from flask_cors import CORS
 from os import getenv

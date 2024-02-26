@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 """app_views instantiation & index imports"""
 from flask import Blueprint
 
