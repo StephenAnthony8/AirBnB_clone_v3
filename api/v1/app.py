@@ -14,6 +14,7 @@ CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 # register blueprint here
 app.register_blueprint(app_views)
 
+
 @app.teardown_appcontext
 def teardown_my_db(exc):
     """closes the storage on end of connection to host"""
